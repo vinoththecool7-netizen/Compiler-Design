@@ -14,7 +14,6 @@
 | 30 | `mobile.l` |
 | 31 | `token.l` |
 | 32 | `vowels.l` |
-| 33–34 | Absent from the source repository |
 | 35 | `numbers_words.l` |
 | 36 | `positive_neg_nums.l` |
 | 37 | `url.l` |

@@ -1,0 +1,242 @@
+{
+  "source": "out: int = 0\nwhile out < 3 and (out < 2 or tick() == 1):\n    out = out + 1\n",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "if<",
+      "out",
+      3,
+      4
+    ],
+    [
+      "jump",
+      null,
+      null,
+      12
+    ],
+    [
+      "if<",
+      "out",
+      2,
+      9
+    ],
+    [
+      "jump",
+      null,
+      null,
+      6
+    ],
+    [
+      "call",
+      "tick",
+      0,
+      "%t1"
+    ],
+    [
+      "if==",
+      "%t1",
+      1,
+      9
+    ],
+    [
+      "jump",
+      null,
+      null,
+      12
+    ],
+    [
+      "+",
+      "out",
+      1,
+      "%t2"
+    ],
+    [
+      "copy",
+      "%t2",
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      2
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "statement nextlist",
+      1,
+      0,
+      []
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      "patch before",
+      [
+        2
+      ],
+      4,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        2
+      ],
+      4,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None]]"
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "patch before",
+      [
+        5
+      ],
+      6,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None], ['if<', 'out', 2, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        5
+      ],
+      6,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None], ['if<', 'out', 2, None], ['jump', None, None, 6]]"
+    ],
+    [
+      "argument queue",
+      "tick",
+      [],
+      0
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        7
+      ],
+      [
+        8
+      ]
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        4,
+        7
+      ],
+      [
+        8
+      ]
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        4,
+        7
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    [
+      "patch before",
+      [
+        4,
+        7
+      ],
+      9,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None], ['if<', 'out', 2, None], ['jump', None, None, 6], ['call', 'tick', 0, '%t1'], ['if==', '%t1', 1, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        4,
+        7
+      ],
+      9,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None], ['if<', 'out', 2, 9], ['jump', None, None, 6], ['call', 'tick', 0, '%t1'], ['if==', '%t1', 1, 9], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      3,
+      9,
+      []
+    ],
+    [
+      "patch before",
+      [
+        3,
+        8
+      ],
+      12,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, None], ['if<', 'out', 2, 9], ['jump', None, None, 6], ['call', 'tick', 0, '%t1'], ['if==', '%t1', 1, 9], ['jump', None, None, None], ['+', 'out', 1, '%t2'], ['copy', '%t2', None, 'out'], ['jump', None, None, 2]]"
+    ],
+    [
+      "patch after",
+      [
+        3,
+        8
+      ],
+      12,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['if<', 'out', 3, 4], ['jump', None, None, 12], ['if<', 'out', 2, 9], ['jump', None, None, 6], ['call', 'tick', 0, '%t1'], ['if==', '%t1', 1, 9], ['jump', None, None, 12], ['+', 'out', 1, '%t2'], ['copy', '%t2', None, 'out'], ['jump', None, None, 2]]"
+    ],
+    [
+      "loop lists",
+      [],
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      2,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 3,
+    "actual": 3,
+    "before": 13,
+    "after": 13,
+    "threads": 0
+  }
+}

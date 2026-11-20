@@ -1,0 +1,586 @@
+{
+  "source": "out: int = 0\ni: int\nj: int\ns: int = -1\nfor i in count(3,1,s):\n    for j in count(1,3,1):\n        if j == 1:\n            continue\n        out = out + i\n        break\n    if i == 2:\n        continue\n    out = out + 10\n",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "i"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "j"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "s"
+    ],
+    [
+      "neg",
+      1,
+      null,
+      "%t1"
+    ],
+    [
+      "copy",
+      "%t1",
+      null,
+      "s"
+    ],
+    [
+      "copy",
+      3,
+      null,
+      "%t2"
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "%t3"
+    ],
+    [
+      "copy",
+      "s",
+      null,
+      "%t4"
+    ],
+    [
+      "nonzero",
+      "%t4",
+      null,
+      null
+    ],
+    [
+      "copy",
+      "%t2",
+      null,
+      "i"
+    ],
+    [
+      "if<",
+      "%t4",
+      0,
+      15
+    ],
+    [
+      "if>",
+      "i",
+      "%t3",
+      40
+    ],
+    [
+      "jump",
+      null,
+      null,
+      16
+    ],
+    [
+      "if<",
+      "i",
+      "%t3",
+      40
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "%t5"
+    ],
+    [
+      "copy",
+      3,
+      null,
+      "%t6"
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "%t7"
+    ],
+    [
+      "nonzero",
+      "%t7",
+      null,
+      null
+    ],
+    [
+      "copy",
+      "%t5",
+      null,
+      "j"
+    ],
+    [
+      "if<",
+      "%t7",
+      0,
+      24
+    ],
+    [
+      "if>",
+      "j",
+      "%t6",
+      33
+    ],
+    [
+      "jump",
+      null,
+      null,
+      25
+    ],
+    [
+      "if<",
+      "j",
+      "%t6",
+      33
+    ],
+    [
+      "if==",
+      "j",
+      1,
+      27
+    ],
+    [
+      "jump",
+      null,
+      null,
+      28
+    ],
+    [
+      "jump",
+      null,
+      null,
+      31
+    ],
+    [
+      "+",
+      "out",
+      "i",
+      "%t8"
+    ],
+    [
+      "copy",
+      "%t8",
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      33
+    ],
+    [
+      "+",
+      "j",
+      "%t7",
+      "j"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      21
+    ],
+    [
+      "if==",
+      "i",
+      2,
+      35
+    ],
+    [
+      "jump",
+      null,
+      null,
+      36
+    ],
+    [
+      "jump",
+      null,
+      null,
+      38
+    ],
+    [
+      "+",
+      "out",
+      10,
+      "%t9"
+    ],
+    [
+      "copy",
+      "%t9",
+      null,
+      "out"
+    ],
+    [
+      "+",
+      "i",
+      "%t4",
+      "i"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      12
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "statement nextlist",
+      1,
+      0,
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      2,
+      []
+    ],
+    [
+      "statement nextlist",
+      3,
+      3,
+      []
+    ],
+    [
+      "statement nextlist",
+      4,
+      4,
+      []
+    ],
+    [
+      "patch before",
+      [
+        12
+      ],
+      15,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, None], ['if>', 'i', '%t3', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        12
+      ],
+      15,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch before",
+      [
+        14
+      ],
+      16,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, None], ['if<', 'i', '%t3', None]]"
+    ],
+    [
+      "patch after",
+      [
+        14
+      ],
+      16,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None]]"
+    ],
+    [
+      "patch before",
+      [
+        21
+      ],
+      24,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, None], ['if>', 'j', '%t6', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        21
+      ],
+      24,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch before",
+      [
+        23
+      ],
+      25,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, None], ['if<', 'j', '%t6', None]]"
+    ],
+    [
+      "patch after",
+      [
+        23
+      ],
+      25,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None]]"
+    ],
+    [
+      "boolean lists",
+      7,
+      [
+        25
+      ],
+      [
+        26
+      ]
+    ],
+    [
+      "patch before",
+      [
+        25
+      ],
+      27,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        25
+      ],
+      27,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      8,
+      27,
+      []
+    ],
+    [
+      "patch before",
+      [
+        26
+      ],
+      28,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        26
+      ],
+      28,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      7,
+      25,
+      []
+    ],
+    [
+      "statement nextlist",
+      9,
+      28,
+      []
+    ],
+    [
+      "statement nextlist",
+      10,
+      30,
+      []
+    ],
+    [
+      "patch before",
+      [
+        27
+      ],
+      31,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, None], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        27
+      ],
+      31,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, None]]"
+    ],
+    [
+      "patch before",
+      [
+        22,
+        24
+      ],
+      33,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', None], ['jump', None, None, 25], ['if<', 'j', '%t6', None], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, None], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21]]"
+    ],
+    [
+      "patch after",
+      [
+        22,
+        24
+      ],
+      33,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, None], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21]]"
+    ],
+    [
+      "patch before",
+      [
+        30
+      ],
+      33,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, None], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21]]"
+    ],
+    [
+      "patch after",
+      [
+        30
+      ],
+      33,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21]]"
+    ],
+    [
+      "loop lists",
+      [
+        30
+      ],
+      [
+        27
+      ]
+    ],
+    [
+      "statement nextlist",
+      6,
+      16,
+      []
+    ],
+    [
+      "boolean lists",
+      11,
+      [
+        33
+      ],
+      [
+        34
+      ]
+    ],
+    [
+      "patch before",
+      [
+        33
+      ],
+      35,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        33
+      ],
+      35,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      12,
+      35,
+      []
+    ],
+    [
+      "patch before",
+      [
+        34
+      ],
+      36,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        34
+      ],
+      36,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, 36], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      11,
+      33,
+      []
+    ],
+    [
+      "statement nextlist",
+      13,
+      36,
+      []
+    ],
+    [
+      "patch before",
+      [
+        35
+      ],
+      38,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, 36], ['jump', None, None, None], ['+', 'out', 10, '%t9'], ['copy', '%t9', None, 'out']]"
+    ],
+    [
+      "patch after",
+      [
+        35
+      ],
+      38,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, 36], ['jump', None, None, 38], ['+', 'out', 10, '%t9'], ['copy', '%t9', None, 'out']]"
+    ],
+    [
+      "patch before",
+      [
+        13,
+        15
+      ],
+      40,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', None], ['jump', None, None, 16], ['if<', 'i', '%t3', None], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, 36], ['jump', None, None, 38], ['+', 'out', 10, '%t9'], ['copy', '%t9', None, 'out'], ['+', 'i', '%t4', 'i'], ['jump', None, None, 12]]"
+    ],
+    [
+      "patch after",
+      [
+        13,
+        15
+      ],
+      40,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['copy', 0, None, 'i'], ['copy', 0, None, 'j'], ['copy', 0, None, 's'], ['neg', 1, None, '%t1'], ['copy', '%t1', None, 's'], ['copy', 3, None, '%t2'], ['copy', 1, None, '%t3'], ['copy', 's', None, '%t4'], ['nonzero', '%t4', None, None], ['copy', '%t2', None, 'i'], ['if<', '%t4', 0, 15], ['if>', 'i', '%t3', 40], ['jump', None, None, 16], ['if<', 'i', '%t3', 40], ['copy', 1, None, '%t5'], ['copy', 3, None, '%t6'], ['copy', 1, None, '%t7'], ['nonzero', '%t7', None, None], ['copy', '%t5', None, 'j'], ['if<', '%t7', 0, 24], ['if>', 'j', '%t6', 33], ['jump', None, None, 25], ['if<', 'j', '%t6', 33], ['if==', 'j', 1, 27], ['jump', None, None, 28], ['jump', None, None, 31], ['+', 'out', 'i', '%t8'], ['copy', '%t8', None, 'out'], ['jump', None, None, 33], ['+', 'j', '%t7', 'j'], ['jump', None, None, 21], ['if==', 'i', 2, 35], ['jump', None, None, 36], ['jump', None, None, 38], ['+', 'out', 10, '%t9'], ['copy', '%t9', None, 'out'], ['+', 'i', '%t4', 'i'], ['jump', None, None, 12]]"
+    ],
+    [
+      "loop lists",
+      [],
+      [
+        35
+      ]
+    ],
+    [
+      "statement nextlist",
+      5,
+      7,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 26,
+    "actual": 26,
+    "before": 41,
+    "after": 39,
+    "threads": 2
+  }
+}

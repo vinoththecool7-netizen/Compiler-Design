@@ -1,0 +1,51 @@
+{
+  "factorial": {
+    "expected": 120,
+    "actual": 120,
+    "before": 16,
+    "after": 15,
+    "threads": 0
+  },
+  "array_sum": {
+    "expected": 14,
+    "actual": 14,
+    "before": 70,
+    "after": 70,
+    "threads": 0
+  },
+  "short_circuit": {
+    "expected": 3,
+    "actual": 3,
+    "before": 13,
+    "after": 13,
+    "threads": 0
+  },
+  "switch": {
+    "expected": 30,
+    "actual": 30,
+    "before": 14,
+    "after": 14,
+    "threads": 0
+  },
+  "calls": {
+    "expected": 64,
+    "actual": 64,
+    "before": 26,
+    "after": 22,
+    "threads": 0
+  },
+  "do_while": {
+    "expected": 3,
+    "actual": 3,
+    "before": 7,
+    "after": 7,
+    "threads": 0
+  },
+  "negative_loop": {
+    "expected": 26,
+    "actual": 26,
+    "before": 41,
+    "after": 39,
+    "threads": 2
+  }
+}

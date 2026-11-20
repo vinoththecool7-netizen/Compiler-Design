@@ -1,0 +1,403 @@
+{
+  "base": [
+    [
+      [
+        "global",
+        "ch",
+        "char",
+        1,
+        0
+      ],
+      [
+        "global",
+        "a",
+        "int",
+        4,
+        1
+      ],
+      [
+        "global",
+        "b",
+        "int",
+        4,
+        5
+      ],
+      [
+        "global",
+        "c",
+        "array(10,float)",
+        80,
+        9
+      ],
+      [
+        "global.record16",
+        "x",
+        "int",
+        4,
+        0
+      ],
+      [
+        "global.record16",
+        "y",
+        "float",
+        8,
+        4
+      ],
+      [
+        "global",
+        "r",
+        "record",
+        12,
+        89
+      ],
+      [
+        "global",
+        "p",
+        "pointer(float)",
+        4,
+        101
+      ],
+      [
+        "global",
+        "done",
+        "boolean",
+        1,
+        105
+      ],
+      [
+        "global",
+        "m",
+        "array(2,array(3,int))",
+        24,
+        106
+      ]
+    ],
+    130,
+    [
+      "inherit global: t=char w=1",
+      "enter(ch,char,1,0); offset 0 -> 1",
+      "inherit global: t=int w=4",
+      "enter(a,int,4,1); offset 1 -> 5",
+      "inherit global: t=int w=4",
+      "enter(b,int,4,5); offset 5 -> 9",
+      "inherit global: t=float w=8",
+      "enter(c,array(10,float),80,9); offset 9 -> 89",
+      "inherit global.record16: t=int w=4",
+      "enter(x,int,4,0); offset 0 -> 4",
+      "inherit global.record16: t=float w=8",
+      "enter(y,float,8,4); offset 4 -> 12",
+      "scope global.record16 fields occupy 12 bytes",
+      "record storage after tail padding: 12",
+      "inherit global: t=record w=12",
+      "enter(r,record,12,89); offset 89 -> 101",
+      "inherit global: t=float w=8",
+      "enter(p,pointer(float),4,101); offset 101 -> 105",
+      "inherit global: t=boolean w=1",
+      "enter(done,boolean,1,105); offset 105 -> 106",
+      "inherit global: t=int w=4",
+      "enter(m,array(2,array(3,int)),24,106); offset 106 -> 130",
+      "scope global fields occupy 130 bytes"
+    ]
+  ],
+  "float4": [
+    [
+      [
+        "global",
+        "ch",
+        "char",
+        1,
+        0
+      ],
+      [
+        "global",
+        "a",
+        "int",
+        4,
+        1
+      ],
+      [
+        "global",
+        "b",
+        "int",
+        4,
+        5
+      ],
+      [
+        "global",
+        "c",
+        "array(10,float)",
+        40,
+        9
+      ],
+      [
+        "global.record16",
+        "x",
+        "int",
+        4,
+        0
+      ],
+      [
+        "global.record16",
+        "y",
+        "float",
+        4,
+        4
+      ],
+      [
+        "global",
+        "r",
+        "record",
+        8,
+        49
+      ],
+      [
+        "global",
+        "p",
+        "pointer(float)",
+        4,
+        57
+      ],
+      [
+        "global",
+        "done",
+        "boolean",
+        1,
+        61
+      ],
+      [
+        "global",
+        "m",
+        "array(2,array(3,int))",
+        24,
+        62
+      ]
+    ],
+    86,
+    [
+      "inherit global: t=char w=1",
+      "enter(ch,char,1,0); offset 0 -> 1",
+      "inherit global: t=int w=4",
+      "enter(a,int,4,1); offset 1 -> 5",
+      "inherit global: t=int w=4",
+      "enter(b,int,4,5); offset 5 -> 9",
+      "inherit global: t=float w=4",
+      "enter(c,array(10,float),40,9); offset 9 -> 49",
+      "inherit global.record16: t=int w=4",
+      "enter(x,int,4,0); offset 0 -> 4",
+      "inherit global.record16: t=float w=4",
+      "enter(y,float,4,4); offset 4 -> 8",
+      "scope global.record16 fields occupy 8 bytes",
+      "record storage after tail padding: 8",
+      "inherit global: t=record w=8",
+      "enter(r,record,8,49); offset 49 -> 57",
+      "inherit global: t=float w=4",
+      "enter(p,pointer(float),4,57); offset 57 -> 61",
+      "inherit global: t=boolean w=1",
+      "enter(done,boolean,1,61); offset 61 -> 62",
+      "inherit global: t=int w=4",
+      "enter(m,array(2,array(3,int)),24,62); offset 62 -> 86",
+      "scope global fields occupy 86 bytes"
+    ]
+  ],
+  "align4": [
+    [
+      [
+        "global",
+        "ch",
+        "char",
+        1,
+        0
+      ],
+      [
+        "global",
+        "a",
+        "int",
+        4,
+        4
+      ],
+      [
+        "global",
+        "b",
+        "int",
+        4,
+        8
+      ],
+      [
+        "global",
+        "c",
+        "array(10,float)",
+        80,
+        12
+      ],
+      [
+        "global.record16",
+        "x",
+        "int",
+        4,
+        0
+      ],
+      [
+        "global.record16",
+        "y",
+        "float",
+        8,
+        4
+      ],
+      [
+        "global",
+        "r",
+        "record",
+        12,
+        92
+      ],
+      [
+        "global",
+        "p",
+        "pointer(float)",
+        4,
+        104
+      ],
+      [
+        "global",
+        "done",
+        "boolean",
+        1,
+        108
+      ],
+      [
+        "global",
+        "m",
+        "array(2,array(3,int))",
+        24,
+        112
+      ]
+    ],
+    136,
+    [
+      "inherit global: t=char w=1",
+      "enter(ch,char,1,0); offset 0 -> 1",
+      "inherit global: t=int w=4",
+      "enter(a,int,4,4); offset 1 -> 8",
+      "inherit global: t=int w=4",
+      "enter(b,int,4,8); offset 8 -> 12",
+      "inherit global: t=float w=8",
+      "enter(c,array(10,float),80,12); offset 12 -> 92",
+      "inherit global.record16: t=int w=4",
+      "enter(x,int,4,0); offset 0 -> 4",
+      "inherit global.record16: t=float w=8",
+      "enter(y,float,8,4); offset 4 -> 12",
+      "scope global.record16 fields occupy 12 bytes",
+      "record storage after tail padding: 12",
+      "inherit global: t=record w=12",
+      "enter(r,record,12,92); offset 92 -> 104",
+      "inherit global: t=float w=8",
+      "enter(p,pointer(float),4,104); offset 104 -> 108",
+      "inherit global: t=boolean w=1",
+      "enter(done,boolean,1,108); offset 108 -> 109",
+      "inherit global: t=int w=4",
+      "enter(m,array(2,array(3,int)),24,112); offset 109 -> 136",
+      "scope global fields occupy 136 bytes"
+    ]
+  ],
+  "record8": [
+    [
+      [
+        "global",
+        "ch",
+        "char",
+        1,
+        0
+      ],
+      [
+        "global",
+        "a",
+        "int",
+        4,
+        1
+      ],
+      [
+        "global",
+        "b",
+        "int",
+        4,
+        5
+      ],
+      [
+        "global",
+        "c",
+        "array(10,float)",
+        80,
+        9
+      ],
+      [
+        "global.record16",
+        "x",
+        "int",
+        4,
+        0
+      ],
+      [
+        "global.record16",
+        "y",
+        "float",
+        8,
+        4
+      ],
+      [
+        "global",
+        "r",
+        "record",
+        16,
+        96
+      ],
+      [
+        "global",
+        "p",
+        "pointer(float)",
+        4,
+        112
+      ],
+      [
+        "global",
+        "done",
+        "boolean",
+        1,
+        116
+      ],
+      [
+        "global",
+        "m",
+        "array(2,array(3,int))",
+        24,
+        117
+      ]
+    ],
+    141,
+    [
+      "inherit global: t=char w=1",
+      "enter(ch,char,1,0); offset 0 -> 1",
+      "inherit global: t=int w=4",
+      "enter(a,int,4,1); offset 1 -> 5",
+      "inherit global: t=int w=4",
+      "enter(b,int,4,5); offset 5 -> 9",
+      "inherit global: t=float w=8",
+      "enter(c,array(10,float),80,9); offset 9 -> 89",
+      "inherit global.record16: t=int w=4",
+      "enter(x,int,4,0); offset 0 -> 4",
+      "inherit global.record16: t=float w=8",
+      "enter(y,float,8,4); offset 4 -> 12",
+      "scope global.record16 fields occupy 12 bytes",
+      "record storage after tail padding: 16",
+      "inherit global: t=record w=16",
+      "enter(r,record,16,96); offset 89 -> 112",
+      "inherit global: t=float w=8",
+      "enter(p,pointer(float),4,112); offset 112 -> 116",
+      "inherit global: t=boolean w=1",
+      "enter(done,boolean,1,116); offset 116 -> 117",
+      "inherit global: t=int w=4",
+      "enter(m,array(2,array(3,int)),24,117); offset 117 -> 141",
+      "scope global fields occupy 141 bytes"
+    ]
+  ],
+  "boundary": "array bound must be positive"
+}

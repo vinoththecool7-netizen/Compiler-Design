@@ -1,0 +1,121 @@
+{
+  "source": "out: int = 0\nwith do(out < 3):\n    out = out + 1\n",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "+",
+      "out",
+      1,
+      "%t1"
+    ],
+    [
+      "copy",
+      "%t1",
+      null,
+      "out"
+    ],
+    [
+      "if<",
+      "out",
+      3,
+      2
+    ],
+    [
+      "jump",
+      null,
+      null,
+      6
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "statement nextlist",
+      1,
+      0,
+      []
+    ],
+    [
+      "statement nextlist",
+      3,
+      2,
+      []
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      "patch before",
+      [
+        4
+      ],
+      2,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['+', 'out', 1, '%t1'], ['copy', '%t1', None, 'out'], ['if<', 'out', 3, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        4
+      ],
+      2,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['+', 'out', 1, '%t1'], ['copy', '%t1', None, 'out'], ['if<', 'out', 3, 2], ['jump', None, None, None]]"
+    ],
+    [
+      "patch before",
+      [
+        5
+      ],
+      6,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['+', 'out', 1, '%t1'], ['copy', '%t1', None, 'out'], ['if<', 'out', 3, 2], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        5
+      ],
+      6,
+      "[['copy', 0, None, 'out'], ['copy', 0, None, 'out'], ['+', 'out', 1, '%t1'], ['copy', '%t1', None, 'out'], ['if<', 'out', 3, 2], ['jump', None, None, 6]]"
+    ],
+    [
+      "loop lists",
+      [],
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      2,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 3,
+    "actual": 3,
+    "before": 7,
+    "after": 7,
+    "threads": 0
+  }
+}

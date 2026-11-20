@@ -1,0 +1,253 @@
+{
+  "source": "def g(a):\n    return a * 2\ndef f(a,b):\n    return a * 10 + b\ndef zero():\n    return 0\ndef noop() -> void:\n    return\nnoop()\nout: int = f(g(3), 3+1) + zero()\n",
+  "quadruples": [
+    [
+      "call",
+      "noop",
+      0,
+      null
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      3,
+      null,
+      "%t1"
+    ],
+    [
+      "param",
+      "%t1",
+      null,
+      null
+    ],
+    [
+      "call",
+      "g",
+      1,
+      "%t2"
+    ],
+    [
+      "copy",
+      "%t2",
+      null,
+      "%t3"
+    ],
+    [
+      "+",
+      3,
+      1,
+      "%t4"
+    ],
+    [
+      "copy",
+      "%t4",
+      null,
+      "%t5"
+    ],
+    [
+      "param",
+      "%t3",
+      null,
+      null
+    ],
+    [
+      "param",
+      "%t5",
+      null,
+      null
+    ],
+    [
+      "call",
+      "f",
+      2,
+      "%t6"
+    ],
+    [
+      "call",
+      "zero",
+      0,
+      "%t7"
+    ],
+    [
+      "+",
+      "%t6",
+      "%t7",
+      "%t8"
+    ],
+    [
+      "copy",
+      "%t8",
+      null,
+      "out"
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ],
+    [
+      "*",
+      "a",
+      2,
+      "%t9"
+    ],
+    [
+      "return",
+      "%t9",
+      null,
+      null
+    ],
+    [
+      "trap",
+      null,
+      null,
+      null
+    ],
+    [
+      "*",
+      "a",
+      10,
+      "%t10"
+    ],
+    [
+      "+",
+      "%t10",
+      "b",
+      "%t11"
+    ],
+    [
+      "return",
+      "%t11",
+      null,
+      null
+    ],
+    [
+      "trap",
+      null,
+      null,
+      null
+    ],
+    [
+      "return",
+      0,
+      null,
+      null
+    ],
+    [
+      "trap",
+      null,
+      null,
+      null
+    ],
+    [
+      "return",
+      null,
+      null,
+      null
+    ],
+    [
+      "return",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "argument queue",
+      "noop",
+      [],
+      0
+    ],
+    [
+      "statement nextlist",
+      9,
+      0,
+      []
+    ],
+    [
+      "argument evaluated",
+      "g",
+      0,
+      "%t1"
+    ],
+    [
+      "argument queue",
+      "g",
+      [
+        "%t1"
+      ],
+      1
+    ],
+    [
+      "argument evaluated",
+      "f",
+      0,
+      "%t3"
+    ],
+    [
+      "argument evaluated",
+      "f",
+      1,
+      "%t5"
+    ],
+    [
+      "argument queue",
+      "f",
+      [
+        "%t3",
+        "%t5"
+      ],
+      2
+    ],
+    [
+      "argument queue",
+      "zero",
+      [],
+      0
+    ],
+    [
+      "statement nextlist",
+      10,
+      1,
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      15,
+      []
+    ],
+    [
+      "statement nextlist",
+      4,
+      18,
+      []
+    ],
+    [
+      "statement nextlist",
+      6,
+      22,
+      []
+    ],
+    [
+      "statement nextlist",
+      8,
+      24,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 64,
+    "actual": 64,
+    "before": 26,
+    "after": 22,
+    "threads": 0
+  }
+}

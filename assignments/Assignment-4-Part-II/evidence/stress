@@ -1,0 +1,15 @@
+{
+  "nested": "line 8: too many nested parentheses",
+  "or": {
+    "quads": 816,
+    "x": 1
+  },
+  "cases": {
+    "quads": 1208,
+    "x": 399
+  },
+  "expression": {
+    "quads": 1202,
+    "x": 1200
+  }
+}

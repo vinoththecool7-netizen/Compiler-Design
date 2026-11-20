@@ -1,0 +1,325 @@
+{
+  "condition": "not (a < b and c < d) or e < f",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "a"
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "a"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "b"
+    ],
+    [
+      "copy",
+      2,
+      null,
+      "b"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "c"
+    ],
+    [
+      "copy",
+      3,
+      null,
+      "c"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "d"
+    ],
+    [
+      "copy",
+      2,
+      null,
+      "d"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "e"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "e"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "f"
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "f"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "x"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "x"
+    ],
+    [
+      "if<",
+      "a",
+      "b",
+      16
+    ],
+    [
+      "jump",
+      null,
+      null,
+      20
+    ],
+    [
+      "if<",
+      "c",
+      "d",
+      18
+    ],
+    [
+      "jump",
+      null,
+      null,
+      20
+    ],
+    [
+      "if<",
+      "e",
+      "f",
+      20
+    ],
+    [
+      "jump",
+      null,
+      null,
+      21
+    ],
+    [
+      "copy",
+      1,
+      null,
+      "x"
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ]
+  ],
+  "trace": [
+    [
+      "statement nextlist",
+      1,
+      0,
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      2,
+      []
+    ],
+    [
+      "statement nextlist",
+      3,
+      4,
+      []
+    ],
+    [
+      "statement nextlist",
+      4,
+      6,
+      []
+    ],
+    [
+      "statement nextlist",
+      5,
+      8,
+      []
+    ],
+    [
+      "statement nextlist",
+      6,
+      10,
+      []
+    ],
+    [
+      "statement nextlist",
+      7,
+      12,
+      []
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        14
+      ],
+      [
+        15
+      ]
+    ],
+    [
+      "patch before",
+      [
+        14
+      ],
+      16,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        14
+      ],
+      16,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, None]]"
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        16
+      ],
+      [
+        17
+      ]
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        16
+      ],
+      [
+        15,
+        17
+      ]
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        15,
+        17
+      ],
+      [
+        16
+      ]
+    ],
+    [
+      "patch before",
+      [
+        16
+      ],
+      18,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, None], ['if<', 'c', 'd', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        16
+      ],
+      18,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, None], ['if<', 'c', 'd', 18], ['jump', None, None, None]]"
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        18
+      ],
+      [
+        19
+      ]
+    ],
+    [
+      "boolean lists",
+      8,
+      [
+        15,
+        17,
+        18
+      ],
+      [
+        19
+      ]
+    ],
+    [
+      "patch before",
+      [
+        15,
+        17,
+        18
+      ],
+      20,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, None], ['if<', 'c', 'd', 18], ['jump', None, None, None], ['if<', 'e', 'f', None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        15,
+        17,
+        18
+      ],
+      20,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, 20], ['if<', 'c', 'd', 18], ['jump', None, None, 20], ['if<', 'e', 'f', 20], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      9,
+      20,
+      []
+    ],
+    [
+      "patch before",
+      [
+        19
+      ],
+      21,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, 20], ['if<', 'c', 'd', 18], ['jump', None, None, 20], ['if<', 'e', 'f', 20], ['jump', None, None, None], ['copy', 1, None, 'x']]"
+    ],
+    [
+      "patch after",
+      [
+        19
+      ],
+      21,
+      "[['copy', 0, None, 'a'], ['copy', 1, None, 'a'], ['copy', 0, None, 'b'], ['copy', 2, None, 'b'], ['copy', 0, None, 'c'], ['copy', 3, None, 'c'], ['copy', 0, None, 'd'], ['copy', 2, None, 'd'], ['copy', 0, None, 'e'], ['copy', 0, None, 'e'], ['copy', 0, None, 'f'], ['copy', 1, None, 'f'], ['copy', 0, None, 'x'], ['copy', 0, None, 'x'], ['if<', 'a', 'b', 16], ['jump', None, None, 20], ['if<', 'c', 'd', 18], ['jump', None, None, 20], ['if<', 'e', 'f', 20], ['jump', None, None, 21], ['copy', 1, None, 'x']]"
+    ],
+    [
+      "statement nextlist",
+      8,
+      14,
+      []
+    ]
+  ]
+}

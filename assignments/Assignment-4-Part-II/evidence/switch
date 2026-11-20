@@ -1,0 +1,170 @@
+{
+  "source": "k: int = 3\nout: int\nmatch k:\n    case 1:\n        out = 10\n    case 3:\n        out = 30\n    case _:\n        out = 0\n",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "k"
+    ],
+    [
+      "copy",
+      3,
+      null,
+      "k"
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      10
+    ],
+    [
+      "copy",
+      10,
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      13
+    ],
+    [
+      "copy",
+      30,
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      13
+    ],
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "jump",
+      null,
+      null,
+      13
+    ],
+    [
+      "if==",
+      "k",
+      1,
+      4
+    ],
+    [
+      "if==",
+      "k",
+      3,
+      6
+    ],
+    [
+      "jump",
+      null,
+      null,
+      8
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "statement nextlist",
+      1,
+      0,
+      []
+    ],
+    [
+      "statement nextlist",
+      2,
+      2,
+      []
+    ],
+    [
+      "statement nextlist",
+      5,
+      4,
+      []
+    ],
+    [
+      "statement nextlist",
+      7,
+      6,
+      []
+    ],
+    [
+      "statement nextlist",
+      9,
+      8,
+      []
+    ],
+    [
+      "patch before",
+      [
+        3
+      ],
+      10,
+      "[['copy', 0, None, 'k'], ['copy', 3, None, 'k'], ['copy', 0, None, 'out'], ['jump', None, None, None], ['copy', 10, None, 'out'], ['jump', None, None, None], ['copy', 30, None, 'out'], ['jump', None, None, None], ['copy', 0, None, 'out'], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        3
+      ],
+      10,
+      "[['copy', 0, None, 'k'], ['copy', 3, None, 'k'], ['copy', 0, None, 'out'], ['jump', None, None, 10], ['copy', 10, None, 'out'], ['jump', None, None, None], ['copy', 30, None, 'out'], ['jump', None, None, None], ['copy', 0, None, 'out'], ['jump', None, None, None]]"
+    ],
+    [
+      "patch before",
+      [
+        5,
+        7,
+        9
+      ],
+      13,
+      "[['copy', 0, None, 'k'], ['copy', 3, None, 'k'], ['copy', 0, None, 'out'], ['jump', None, None, 10], ['copy', 10, None, 'out'], ['jump', None, None, None], ['copy', 30, None, 'out'], ['jump', None, None, None], ['copy', 0, None, 'out'], ['jump', None, None, None], ['if==', 'k', 1, 4], ['if==', 'k', 3, 6], ['jump', None, None, 8]]"
+    ],
+    [
+      "patch after",
+      [
+        5,
+        7,
+        9
+      ],
+      13,
+      "[['copy', 0, None, 'k'], ['copy', 3, None, 'k'], ['copy', 0, None, 'out'], ['jump', None, None, 10], ['copy', 10, None, 'out'], ['jump', None, None, 13], ['copy', 30, None, 'out'], ['jump', None, None, 13], ['copy', 0, None, 'out'], ['jump', None, None, 13], ['if==', 'k', 1, 4], ['if==', 'k', 3, 6], ['jump', None, None, 8]]"
+    ],
+    [
+      "statement nextlist",
+      3,
+      3,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 30,
+    "actual": 30,
+    "before": 14,
+    "after": 14,
+    "threads": 0
+  }
+}

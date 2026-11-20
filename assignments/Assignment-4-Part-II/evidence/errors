@@ -1,0 +1,8 @@
+{
+  "omitted patch": "invalid target at Q15: None",
+  "break": "line 1: loop control outside loop",
+  "type": "line 1: assignment type mismatch",
+  "undeclared": "line 1: undeclared x",
+  "arity": "line 3: wrong number of arguments",
+  "bounds": "array bounds"
+}

@@ -1,0 +1,204 @@
+{
+  "source": "def fact(n: int) -> int:\n    if n <= 1:\n        return 1\n    return n * fact(n-1)\nout: int = fact(5)\n",
+  "quadruples": [
+    [
+      "copy",
+      0,
+      null,
+      "out"
+    ],
+    [
+      "copy",
+      5,
+      null,
+      "%t1"
+    ],
+    [
+      "param",
+      "%t1",
+      null,
+      null
+    ],
+    [
+      "call",
+      "fact",
+      1,
+      "%t2"
+    ],
+    [
+      "copy",
+      "%t2",
+      null,
+      "out"
+    ],
+    [
+      "halt",
+      null,
+      null,
+      null
+    ],
+    [
+      "if<=",
+      "n",
+      1,
+      8
+    ],
+    [
+      "jump",
+      null,
+      null,
+      9
+    ],
+    [
+      "return",
+      1,
+      null,
+      null
+    ],
+    [
+      "-",
+      "n",
+      1,
+      "%t3"
+    ],
+    [
+      "copy",
+      "%t3",
+      null,
+      "%t4"
+    ],
+    [
+      "param",
+      "%t4",
+      null,
+      null
+    ],
+    [
+      "call",
+      "fact",
+      1,
+      "%t5"
+    ],
+    [
+      "*",
+      "n",
+      "%t5",
+      "%t6"
+    ],
+    [
+      "return",
+      "%t6",
+      null,
+      null
+    ],
+    [
+      "trap",
+      null,
+      null,
+      null
+    ]
+  ],
+  "patches_and_lists": [
+    [
+      "argument evaluated",
+      "fact",
+      0,
+      "%t1"
+    ],
+    [
+      "argument queue",
+      "fact",
+      [
+        "%t1"
+      ],
+      1
+    ],
+    [
+      "statement nextlist",
+      5,
+      0,
+      []
+    ],
+    [
+      "boolean lists",
+      2,
+      [
+        6
+      ],
+      [
+        7
+      ]
+    ],
+    [
+      "patch before",
+      [
+        6
+      ],
+      8,
+      "[['copy', 0, None, 'out'], ['copy', 5, None, '%t1'], ['param', '%t1', None, None], ['call', 'fact', 1, '%t2'], ['copy', '%t2', None, 'out'], ['halt', None, None, None], ['if<=', 'n', 1, None], ['jump', None, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        6
+      ],
+      8,
+      "[['copy', 0, None, 'out'], ['copy', 5, None, '%t1'], ['param', '%t1', None, None], ['call', 'fact', 1, '%t2'], ['copy', '%t2', None, 'out'], ['halt', None, None, None], ['if<=', 'n', 1, 8], ['jump', None, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      3,
+      8,
+      []
+    ],
+    [
+      "patch before",
+      [
+        7
+      ],
+      9,
+      "[['copy', 0, None, 'out'], ['copy', 5, None, '%t1'], ['param', '%t1', None, None], ['call', 'fact', 1, '%t2'], ['copy', '%t2', None, 'out'], ['halt', None, None, None], ['if<=', 'n', 1, 8], ['jump', None, None, None], ['return', 1, None, None]]"
+    ],
+    [
+      "patch after",
+      [
+        7
+      ],
+      9,
+      "[['copy', 0, None, 'out'], ['copy', 5, None, '%t1'], ['param', '%t1', None, None], ['call', 'fact', 1, '%t2'], ['copy', '%t2', None, 'out'], ['halt', None, None, None], ['if<=', 'n', 1, 8], ['jump', None, None, 9], ['return', 1, None, None]]"
+    ],
+    [
+      "statement nextlist",
+      2,
+      6,
+      []
+    ],
+    [
+      "argument evaluated",
+      "fact",
+      0,
+      "%t4"
+    ],
+    [
+      "argument queue",
+      "fact",
+      [
+        "%t4"
+      ],
+      1
+    ],
+    [
+      "statement nextlist",
+      4,
+      9,
+      []
+    ]
+  ],
+  "result": {
+    "expected": 120,
+    "actual": 120,
+    "before": 16,
+    "after": 15,
+    "threads": 0
+  }
+}

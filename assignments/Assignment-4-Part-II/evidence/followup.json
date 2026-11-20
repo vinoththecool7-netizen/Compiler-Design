@@ -1,0 +1,1450 @@
+{
+  "layout": [
+    [
+      {},
+      [
+        [
+          "global",
+          "tag",
+          "char",
+          1,
+          0
+        ],
+        [
+          "global",
+          "k",
+          "int",
+          4,
+          1
+        ],
+        [
+          "global",
+          "a",
+          "array(3,float)",
+          24,
+          5
+        ],
+        [
+          "global.record14",
+          "x",
+          "int",
+          4,
+          0
+        ],
+        [
+          "global.record14",
+          "y",
+          "boolean",
+          1,
+          4
+        ],
+        [
+          "global",
+          "r",
+          "record",
+          5,
+          29
+        ],
+        [
+          "global",
+          "p",
+          "pointer(int)",
+          4,
+          34
+        ]
+      ],
+      38,
+      [
+        "inherit global: t=char w=1",
+        "enter(tag,char,1,0); offset 0 -> 1",
+        "inherit global: t=int w=4",
+        "enter(k,int,4,1); offset 1 -> 5",
+        "inherit global: t=float w=8",
+        "enter(a,array(3,float),24,5); offset 5 -> 29",
+        "inherit global.record14: t=int w=4",
+        "enter(x,int,4,0); offset 0 -> 4",
+        "inherit global.record14: t=boolean w=1",
+        "enter(y,boolean,1,4); offset 4 -> 5",
+        "scope global.record14 fields occupy 5 bytes",
+        "record storage after tail padding: 5",
+        "inherit global: t=record w=5",
+        "enter(r,record,5,29); offset 29 -> 34",
+        "inherit global: t=int w=4",
+        "enter(p,pointer(int),4,34); offset 34 -> 38",
+        "scope global fields occupy 38 bytes"
+      ]
+    ],
+    [
+      {
+        "float_width": 4
+      },
+      [
+        [
+          "global",
+          "tag",
+          "char",
+          1,
+          0
+        ],
+        [
+          "global",
+          "k",
+          "int",
+          4,
+          1
+        ],
+        [
+          "global",
+          "a",
+          "array(3,float)",
+          12,
+          5
+        ],
+        [
+          "global.record14",
+          "x",
+          "int",
+          4,
+          0
+        ],
+        [
+          "global.record14",
+          "y",
+          "boolean",
+          1,
+          4
+        ],
+        [
+          "global",
+          "r",
+          "record",
+          5,
+          17
+        ],
+        [
+          "global",
+          "p",
+          "pointer(int)",
+          4,
+          22
+        ]
+      ],
+      26,
+      [
+        "inherit global: t=char w=1",
+        "enter(tag,char,1,0); offset 0 -> 1",
+        "inherit global: t=int w=4",
+        "enter(k,int,4,1); offset 1 -> 5",
+        "inherit global: t=float w=4",
+        "enter(a,array(3,float),12,5); offset 5 -> 17",
+        "inherit global.record14: t=int w=4",
+        "enter(x,int,4,0); offset 0 -> 4",
+        "inherit global.record14: t=boolean w=1",
+        "enter(y,boolean,1,4); offset 4 -> 5",
+        "scope global.record14 fields occupy 5 bytes",
+        "record storage after tail padding: 5",
+        "inherit global: t=record w=5",
+        "enter(r,record,5,17); offset 17 -> 22",
+        "inherit global: t=int w=4",
+        "enter(p,pointer(int),4,22); offset 22 -> 26",
+        "scope global fields occupy 26 bytes"
+      ]
+    ],
+    [
+      {
+        "alignment": 4
+      },
+      [
+        [
+          "global",
+          "tag",
+          "char",
+          1,
+          0
+        ],
+        [
+          "global",
+          "k",
+          "int",
+          4,
+          4
+        ],
+        [
+          "global",
+          "a",
+          "array(3,float)",
+          24,
+          8
+        ],
+        [
+          "global.record14",
+          "x",
+          "int",
+          4,
+          0
+        ],
+        [
+          "global.record14",
+          "y",
+          "boolean",
+          1,
+          4
+        ],
+        [
+          "global",
+          "r",
+          "record",
+          5,
+          32
+        ],
+        [
+          "global",
+          "p",
+          "pointer(int)",
+          4,
+          40
+        ]
+      ],
+      44,
+      [
+        "inherit global: t=char w=1",
+        "enter(tag,char,1,0); offset 0 -> 1",
+        "inherit global: t=int w=4",
+        "enter(k,int,4,4); offset 1 -> 8",
+        "inherit global: t=float w=8",
+        "enter(a,array(3,float),24,8); offset 8 -> 32",
+        "inherit global.record14: t=int w=4",
+        "enter(x,int,4,0); offset 0 -> 4",
+        "inherit global.record14: t=boolean w=1",
+        "enter(y,boolean,1,4); offset 4 -> 5",
+        "scope global.record14 fields occupy 5 bytes",
+        "record storage after tail padding: 5",
+        "inherit global: t=record w=5",
+        "enter(r,record,5,32); offset 32 -> 37",
+        "inherit global: t=int w=4",
+        "enter(p,pointer(int),4,40); offset 37 -> 44",
+        "scope global fields occupy 44 bytes"
+      ]
+    ],
+    [
+      {
+        "record_alignment": 8
+      },
+      [
+        [
+          "global",
+          "tag",
+          "char",
+          1,
+          0
+        ],
+        [
+          "global",
+          "k",
+          "int",
+          4,
+          1
+        ],
+        [
+          "global",
+          "a",
+          "array(3,float)",
+          24,
+          5
+        ],
+        [
+          "global.record14",
+          "x",
+          "int",
+          4,
+          0
+        ],
+        [
+          "global.record14",
+          "y",
+          "boolean",
+          1,
+          4
+        ],
+        [
+          "global",
+          "r",
+          "record",
+          8,
+          32
+        ],
+        [
+          "global",
+          "p",
+          "pointer(int)",
+          4,
+          40
+        ]
+      ],
+      44,
+      [
+        "inherit global: t=char w=1",
+        "enter(tag,char,1,0); offset 0 -> 1",
+        "inherit global: t=int w=4",
+        "enter(k,int,4,1); offset 1 -> 5",
+        "inherit global: t=float w=8",
+        "enter(a,array(3,float),24,5); offset 5 -> 29",
+        "inherit global.record14: t=int w=4",
+        "enter(x,int,4,0); offset 0 -> 4",
+        "inherit global.record14: t=boolean w=1",
+        "enter(y,boolean,1,4); offset 4 -> 5",
+        "scope global.record14 fields occupy 5 bytes",
+        "record storage after tail padding: 8",
+        "inherit global: t=record w=8",
+        "enter(r,record,8,32); offset 29 -> 40",
+        "inherit global: t=int w=4",
+        "enter(p,pointer(int),4,40); offset 40 -> 44",
+        "scope global fields occupy 44 bytes"
+      ]
+    ]
+  ],
+  "boolean": [
+    {
+      "lists": [
+        [
+          [
+            14
+          ],
+          [
+            15
+          ]
+        ],
+        [
+          [
+            16
+          ],
+          [
+            17
+          ]
+        ],
+        [
+          [
+            16
+          ],
+          [
+            15,
+            17
+          ]
+        ]
+      ],
+      "quads": [
+        [
+          "copy",
+          0,
+          null,
+          "a"
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "a"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "b"
+        ],
+        [
+          "copy",
+          2,
+          null,
+          "b"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "c"
+        ],
+        [
+          "copy",
+          3,
+          null,
+          "c"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "d"
+        ],
+        [
+          "copy",
+          2,
+          null,
+          "d"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "e"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "e"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "f"
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "f"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "x"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "x"
+        ],
+        [
+          "if<",
+          "a",
+          "b",
+          16
+        ],
+        [
+          "jump",
+          null,
+          null,
+          19
+        ],
+        [
+          "if<",
+          "c",
+          "d",
+          18
+        ],
+        [
+          "jump",
+          null,
+          null,
+          19
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "x"
+        ],
+        [
+          "halt",
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "lists": [
+        [
+          [
+            14
+          ],
+          [
+            15
+          ]
+        ],
+        [
+          [
+            16
+          ],
+          [
+            17
+          ]
+        ],
+        [
+          [
+            16
+          ],
+          [
+            15,
+            17
+          ]
+        ],
+        [
+          [
+            15,
+            17
+          ],
+          [
+            16
+          ]
+        ]
+      ],
+      "quads": [
+        [
+          "copy",
+          0,
+          null,
+          "a"
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "a"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "b"
+        ],
+        [
+          "copy",
+          2,
+          null,
+          "b"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "c"
+        ],
+        [
+          "copy",
+          3,
+          null,
+          "c"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "d"
+        ],
+        [
+          "copy",
+          2,
+          null,
+          "d"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "e"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "e"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "f"
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "f"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "x"
+        ],
+        [
+          "copy",
+          0,
+          null,
+          "x"
+        ],
+        [
+          "if<",
+          "a",
+          "b",
+          16
+        ],
+        [
+          "jump",
+          null,
+          null,
+          18
+        ],
+        [
+          "if<",
+          "c",
+          "d",
+          19
+        ],
+        [
+          "jump",
+          null,
+          null,
+          18
+        ],
+        [
+          "copy",
+          1,
+          null,
+          "x"
+        ],
+        [
+          "halt",
+          null,
+          null,
+          null
+        ]
+      ]
+    }
+  ],
+  "out_of_range": "invalid target at Q14: 20",
+  "switch": [
+    [
+      {
+        "strategy": "linear",
+        "code": [
+          [
+            "eq",
+            10,
+            "case_0"
+          ],
+          [
+            "eq",
+            11,
+            "case_1"
+          ],
+          [
+            "eq",
+            12,
+            "case_2"
+          ],
+          [
+            "goto",
+            "default"
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "12": "case_2"
+        },
+        "instructions": 4,
+        "slots": 0,
+        "bytes": 0,
+        "probes": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "comparisons": [
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "strategy": "binary",
+        "code": [
+          [
+            "label",
+            11
+          ],
+          [
+            "eq",
+            11,
+            "case_1"
+          ],
+          [
+            "lt",
+            11,
+            10
+          ],
+          [
+            "goto",
+            12
+          ],
+          [
+            "label",
+            10
+          ],
+          [
+            "eq",
+            10,
+            "case_0"
+          ],
+          [
+            "lt",
+            10,
+            "default"
+          ],
+          [
+            "goto",
+            "default"
+          ],
+          [
+            "label",
+            12
+          ],
+          [
+            "eq",
+            12,
+            "case_2"
+          ],
+          [
+            "lt",
+            12,
+            "default"
+          ],
+          [
+            "goto",
+            "default"
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "12": "case_2"
+        },
+        "instructions": 9,
+        "slots": 0,
+        "bytes": 0,
+        "probes": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "comparisons": [
+          3,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "strategy": "table",
+        "code": [
+          [
+            "range",
+            10,
+            12
+          ],
+          [
+            "dispatch",
+            [
+              "case_0",
+              "case_1",
+              "case_2"
+            ]
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "12": "case_2"
+        },
+        "instructions": 2,
+        "slots": 3,
+        "bytes": 12,
+        "probes": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "comparisons": [
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "strategy": "linear",
+        "code": [
+          [
+            "eq",
+            10,
+            "case_0"
+          ],
+          [
+            "eq",
+            11,
+            "case_1"
+          ],
+          [
+            "eq",
+            510,
+            "case_2"
+          ],
+          [
+            "goto",
+            "default"
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "510": "case_2"
+        },
+        "instructions": 4,
+        "slots": 0,
+        "bytes": 0,
+        "probes": [
+          10,
+          11,
+          510,
+          511
+        ],
+        "comparisons": [
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "strategy": "binary",
+        "code": [
+          [
+            "label",
+            11
+          ],
+          [
+            "eq",
+            11,
+            "case_1"
+          ],
+          [
+            "lt",
+            11,
+            10
+          ],
+          [
+            "goto",
+            510
+          ],
+          [
+            "label",
+            10
+          ],
+          [
+            "eq",
+            10,
+            "case_0"
+          ],
+          [
+            "lt",
+            10,
+            "default"
+          ],
+          [
+            "goto",
+            "default"
+          ],
+          [
+            "label",
+            510
+          ],
+          [
+            "eq",
+            510,
+            "case_2"
+          ],
+          [
+            "lt",
+            510,
+            "default"
+          ],
+          [
+            "goto",
+            "default"
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "510": "case_2"
+        },
+        "instructions": 9,
+        "slots": 0,
+        "bytes": 0,
+        "probes": [
+          10,
+          11,
+          510,
+          511
+        ],
+        "comparisons": [
+          3,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "strategy": "table",
+        "code": [
+          [
+            "range",
+            10,
+            510
+          ],
+          [
+            "dispatch",
+            [
+              "case_0",
+              "case_1",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "default",
+              "case_2"
+            ]
+          ]
+        ],
+        "tests": {
+          "10": "case_0",
+          "11": "case_1",
+          "510": "case_2"
+        },
+        "instructions": 2,
+        "slots": 501,
+        "bytes": 2004,
+        "probes": [
+          10,
+          11,
+          510,
+          511
+        ],
+        "comparisons": [
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ]
+  ],
+  "order": [
+    112,
+    121
+  ]
+}

@@ -1,0 +1,6 @@
+Follow-up runs
+These checks use new fixtures and were specified before their execution.
+- Storage baseline: char tag at 0, int k at 1, float a[3] at 5, record r at 29 and pointer p at 34, ending at 38. Float width 4 should first move r to 17 and end at 26. Four-byte alignment should first move k to 4 and end at 44. Eight-byte record alignment should first move r to 32 and end at 44.
+- Boolean comparison: replace a < b AND c < d with NOT(a < b AND c < d). The two atom lists combine using AND. NOT exchanges the combined lists. The branch targets for the truth and falsity exits change, while the count stays equal.
+- Switch: expanding [10, 11, 12] to [10, 11, 510] should expand the jump table from 3 to 501 slots. Linear and binary code counts should stay unchanged.
+- With argument evaluation order reversed for pair(tick(),tick()+100), the encoded result 10*a+b should move from 112 to 121. Formal argument positions stay unchanged.

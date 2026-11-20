@@ -1,0 +1,450 @@
+missing semicolon / panic
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 1 | expand E
+$ P ; R T | 1 | expand T
+$ P ; R U F | 1 | expand F
+$ P ; R U num | 1 | match
+$ P ; R U | water | discard lookahead
+$ P ; R U | 2 | discard lookahead
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing semicolon / phrase
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 1 | expand E
+$ P ; R T | 1 | expand T
+$ P ; R U F | 1 | expand F
+$ P ; R U num | 1 | match
+$ P ; R U | water | insert ; before statement starter
+$ P ; R U | <inserted ;> | expand U
+$ P ; R | <inserted ;> | expand R
+$ P ; | <inserted ;> | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing semicolon / island
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 1 | expand E
+$ P ; R T | 1 | expand T
+$ P ; R U F | 1 | expand F
+$ P ; R U num | 1 | match
+$ P ; R U | water | insert ; before statement starter
+$ P ; R U | <inserted ;> | expand U
+$ P ; R | <inserted ;> | expand R
+$ P ; | <inserted ;> | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing operand / panic
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | + | expand U
+$ P ; R U ) R | + | expand R
+$ P ; R U ) R T + | + | match
+$ P ; R U ) R T | ) | sync pop T
+$ P ; R U ) R | ) | expand R
+$ P ; R U ) | ) | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing operand / phrase
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | + | expand U
+$ P ; R U ) R | + | expand R
+$ P ; R U ) R T + | + | match
+$ P ; R U ) R T | ) | insert error operand and pop the offending nonterminal
+$ P ; R U ) R | ) | expand R
+$ P ; R U ) | ) | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing operand / island
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | + | expand U
+$ P ; R U ) R | + | expand R
+$ P ; R U ) R T + | + | match
+$ P ; R U ) R T | ) | insert error operand and pop the offending nonterminal
+$ P ; R U ) R | ) | expand R
+$ P ; R U ) | ) | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+extra closing parenthesis / panic
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | x | expand E
+$ P ; R T | x | expand T
+$ P ; R U F | x | expand F
+$ P ; R U id | x | match
+$ P ; R U | ) | expand U
+$ P ; R | ) | expand R
+$ P ; | ) | discard lookahead
+$ P ; | ; | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+extra closing parenthesis / phrase
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | x | expand E
+$ P ; R T | x | expand T
+$ P ; R U F | x | expand F
+$ P ; R U id | x | match
+$ P ; R U | ) | expand U
+$ P ; R | ) | expand R
+$ P ; | ) | discard lookahead
+$ P ; | ; | match
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+extra closing parenthesis / island
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | x | expand E
+$ P ; R T | x | expand T
+$ P ; R U F | x | expand F
+$ P ; R U id | x | match
+$ P ; R U | ) | expand U
+$ P ; R | ) | expand R
+$ P ; | ) | recover statement at delimiter
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+assignment in condition / panic
+$ P | if | expand P
+$ P S | if | expand S
+$ P ; E water ) E == E ( if | if | match
+$ P ; E water ) E == E ( | ( | match
+$ P ; E water ) E == E | x | expand E
+$ P ; E water ) E == R T | x | expand T
+$ P ; E water ) E == R U F | x | expand F
+$ P ; E water ) E == R U id | x | match
+$ P ; E water ) E == R U | = | discard lookahead
+$ P ; E water ) E == R U | 1 | discard lookahead
+$ P ; E water ) E == R U | ) | expand U
+$ P ; E water ) E == R | ) | expand R
+$ P ; E water ) E == | ) | discard lookahead
+$ P ; E water ) E == | water | discard lookahead
+$ P ; E water ) E == | 2 | discard lookahead
+$ P ; E water ) E == | ; | discard lookahead
+$ P ; E water ) E == | water | discard lookahead
+$ P ; E water ) E == | 3 | discard lookahead
+$ P ; E water ) E == | ; | discard lookahead
+$ P ; E water ) E == | $ | insert ==
+$ P ; E water ) E | $ | sync pop E
+$ P ; E water ) | $ | insert )
+$ P ; E water | $ | insert water
+$ P ; E | $ | sync pop E
+$ P ; | $ | insert ;
+$ P | $ | expand P
+$ | $ | match
+
+assignment in condition / phrase
+$ P | if | expand P
+$ P S | if | expand S
+$ P ; E water ) E == E ( if | if | match
+$ P ; E water ) E == E ( | ( | match
+$ P ; E water ) E == E | x | expand E
+$ P ; E water ) E == R T | x | expand T
+$ P ; E water ) E == R U F | x | expand F
+$ P ; E water ) E == R U id | x | match
+$ P ; E water ) E == R U | = | discard lookahead
+$ P ; E water ) E == R U | 1 | discard lookahead
+$ P ; E water ) E == R U | ) | expand U
+$ P ; E water ) E == R | ) | expand R
+$ P ; E water ) E == | ) | discard lookahead
+$ P ; E water ) E == | water | discard lookahead
+$ P ; E water ) E == | 2 | discard lookahead
+$ P ; E water ) E == | ; | discard lookahead
+$ P ; E water ) E == | water | discard lookahead
+$ P ; E water ) E == | 3 | discard lookahead
+$ P ; E water ) E == | ; | discard lookahead
+$ P ; E water ) E == | $ | insert ==
+$ P ; E water ) E | $ | sync pop E
+$ P ; E water ) | $ | insert )
+$ P ; E water | $ | insert water
+$ P ; E | $ | sync pop E
+$ P ; | $ | insert ;
+$ P | $ | expand P
+$ | $ | match
+
+assignment in condition / island
+$ P | if | expand P
+$ P S | if | expand S
+$ P ; E water ) E == E ( if | if | match
+$ P ; E water ) E == E ( | ( | match
+$ P ; E water ) E == E | x | expand E
+$ P ; E water ) E == R T | x | expand T
+$ P ; E water ) E == R U F | x | expand F
+$ P ; E water ) E == R U id | x | match
+$ P ; E water ) E == R U | = | recover statement at delimiter
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 3 | expand E
+$ P ; R T | 3 | expand T
+$ P ; R U F | 3 | expand F
+$ P ; R U num | 3 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+misspelt keyword / panic
+$ P | watr | discard lookahead
+$ P | 1 | discard lookahead
+$ P | ; | discard lookahead
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+misspelt keyword / phrase
+$ P | watr | discard lookahead
+$ P | 1 | discard lookahead
+$ P | ; | discard lookahead
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+misspelt keyword / island
+$ P | watr | recover statement at delimiter
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+
+missing closing parenthesis / panic
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | ; | expand U
+$ P ; R U ) R | ; | expand R
+$ P ; R U ) | ; | discard lookahead
+$ P ; R U ) | water | discard lookahead
+$ P ; R U ) | 2 | discard lookahead
+$ P ; R U ) | ; | discard lookahead
+$ P ; R U ) | $ | insert )
+$ P ; R U | $ | sync pop U
+$ P ; R | $ | sync pop R
+$ P ; | $ | insert ;
+$ P | $ | expand P
+$ | $ | match
+
+missing closing parenthesis / phrase
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | ; | expand U
+$ P ; R U ) R | ; | expand R
+$ P ; R U ) | ; | discard lookahead
+$ P ; R U ) | water | discard lookahead
+$ P ; R U ) | 2 | discard lookahead
+$ P ; R U ) | ; | discard lookahead
+$ P ; R U ) | $ | insert )
+$ P ; R U | $ | sync pop U
+$ P ; R | $ | sync pop R
+$ P ; | $ | insert ;
+$ P | $ | expand P
+$ | $ | match
+
+missing closing parenthesis / island
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | ( | expand E
+$ P ; R T | ( | expand T
+$ P ; R U F | ( | expand F
+$ P ; R U ) E ( | ( | match
+$ P ; R U ) E | x | expand E
+$ P ; R U ) R T | x | expand T
+$ P ; R U ) R U F | x | expand F
+$ P ; R U ) R U id | x | match
+$ P ; R U ) R U | ; | expand U
+$ P ; R U ) R | ; | expand R
+$ P ; R U ) | ; | recover statement at delimiter
+$ P | water | expand P
+$ P S | water | expand S
+$ P ; E water | water | match
+$ P ; E | 2 | expand E
+$ P ; R T | 2 | expand T
+$ P ; R U F | 2 | expand F
+$ P ; R U num | 2 | match
+$ P ; R U | ; | expand U
+$ P ; R | ; | expand R
+$ P ; | ; | match
+$ P | $ | expand P
+$ | $ | match
+

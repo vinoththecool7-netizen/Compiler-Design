@@ -1,0 +1,15 @@
+Round 1 E: FIRST=∅, FOLLOW=$ )
+Round 1 R: FIRST=+ - ε, FOLLOW=$
+Round 1 T: FIRST=∅, FOLLOW=∅
+Round 1 U: FIRST=* / ε, FOLLOW=∅
+Round 1 F: FIRST=( id num, FOLLOW=∅
+Round 2 E: FIRST=∅, FOLLOW=$ )
+Round 2 R: FIRST=+ - ε, FOLLOW=$ )
+Round 2 T: FIRST=( id num, FOLLOW=$ ) + -
+Round 2 U: FIRST=* / ε, FOLLOW=∅
+Round 2 F: FIRST=( id num, FOLLOW=* /
+Round 3 E: FIRST=( id num, FOLLOW=$ )
+Round 3 R: FIRST=+ - ε, FOLLOW=$ )
+Round 3 T: FIRST=( id num, FOLLOW=$ ) + -
+Round 3 U: FIRST=* / ε, FOLLOW=$ ) + -
+Round 3 F: FIRST=( id num, FOLLOW=$ ) * + - /

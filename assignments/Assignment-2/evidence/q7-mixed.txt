@@ -1,0 +1,3 @@
+Tokens excluding EOF: 20015
+Errors: [(20007, 'T', ')'), (20009, 'P', 'watr')]
+Consumed the entire stream with two reported faults.

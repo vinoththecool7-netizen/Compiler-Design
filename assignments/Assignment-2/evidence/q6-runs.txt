@@ -1,0 +1,49 @@
+ambiguous: states=41; YYLAST+1=71; parser.y: conflicts: 64 shift/reduce
+precedence: states=43; YYLAST+1=92; no conflicts reported
+rewritten: states=49; YYLAST+1=50; no conflicts reported
+dangling: states=49; YYLAST+1=50; parser.y: conflicts: 1 shift/reduce
+reduce_reduce: states=7; YYLAST+1=2; parser.y: conflicts: 1 reduce/reduce
+parser.y:20.4-41: warning: rule never reduced because of conflicts: b: ID
+
+precedence input: x = a * b + c;
+(assign x (+ (* a b) c))
+messages=0
+
+precedence input: let charge; charge = base + units * rate - discount;
+(let charge)
+(assign charge (- (+ base (* units rate)) discount))
+messages=0
+
+precedence input: x = -2 * 3; if (x < 0 && x == 1 || n) x = 2; else x = 3;
+(assign x (* (neg 2) 3))
+(if (|| (&& (< x 0) (== x 1)) n) (assign x 2) (assign x 3))
+messages=0
+
+precedence input: x = + ; y = ; let ; good = 4;
+(assign good 4)
+messages=3
+syntax error
+syntax error
+syntax error
+
+rewritten input: let charge; charge = base + units * rate - discount;
+(let charge)
+(assign charge (- (+ base (* units rate)) discount))
+messages=0
+
+rewritten input: x = -2 * 3; if (x < 0 && x == 1 || n) x = 2; else x = 3;
+(assign x (* (neg 2) 3))
+(if (|| (&& (< x 0) (== x 1)) n) (assign x 2) (assign x 3))
+messages=0
+
+ambiguous input: x = a * b + c;
+(assign x (* a (+ b c)))
+messages=0
+
+dangling input: if (a) if (b) x=1; else x=2;
+(if a (if b (assign x 1) (assign x 2)))
+messages=0
+
+reduce_reduce input: rate
+(first rate)
+messages=0

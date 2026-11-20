@@ -1,0 +1,22 @@
+enter E at rate
+enter T at rate
+enter F at rate
+match rate
+match *
+enter F at (
+match (
+enter E at p
+enter T at p
+enter F at p
+match p
+match +
+enter T at f
+enter F at f
+match f
+match )
+match -
+enter T at d
+enter F at d
+match d
+match $
+AST: ('-', ('*', 'rate', ('+', 'p', 'f')), 'd')

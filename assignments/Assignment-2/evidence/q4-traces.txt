@@ -1,0 +1,14 @@
+0 | c d d $ | shift 1
+0 c 1 | d d $ | shift 2
+0 c 1 d 2 | d $ | reduce C → d
+0 c 1 C 5 | d $ | reduce C → c C
+0 C 3 | d $ | shift 2
+0 C 3 d 2 | $ | reduce C → d
+0 C 3 C 6 | $ | reduce S → C C
+0 S 4 | $ | accept
+
+0 | c d $ | shift 1
+0 c 1 | d $ | shift 2
+0 c 1 d 2 | $ | reduce C → d
+0 c 1 C 5 | $ | reduce C → c C
+0 C 3 | $ | error

@@ -1,0 +1,14 @@
+0 | id + id * id $ | shift 2
+0 id 2 | + id * id $ | reduce F → id
+0 F 4 | + id * id $ | reduce T → F
+0 T 5 | + id * id $ | reduce E → T
+0 E 3 | + id * id $ | shift 7
+0 E 3 + 7 | id * id $ | shift 2
+0 E 3 + 7 id 2 | * id $ | reduce F → id
+0 E 3 + 7 F 4 | * id $ | reduce T → F
+0 E 3 + 7 T 10 | * id $ | shift 8
+0 E 3 + 7 T 10 * 8 | id $ | shift 2
+0 E 3 + 7 T 10 * 8 id 2 | $ | reduce F → id
+0 E 3 + 7 T 10 * 8 F 11 | $ | reduce T → T * F
+0 E 3 + 7 T 10 | $ | reduce E → E + T
+0 E 3 | $ | accept

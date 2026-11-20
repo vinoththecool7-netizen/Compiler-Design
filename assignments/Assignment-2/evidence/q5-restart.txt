@@ -1,0 +1,2 @@
+missing semicolon: stop=1; naive per-token restarts=3
+missing operand: stop=1; naive per-token restarts=4

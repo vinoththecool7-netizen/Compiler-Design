@@ -1,0 +1,19 @@
+case,source,fault_index,LL_index,LR_index,LL_expected,LR_state,mode,messages,cascades,first_at_fault
+missing semicolon,water 1 water 2;,2,2,2,U,8,panic,2,1,yes
+missing semicolon,water 1 water 2;,2,2,2,U,8,phrase,1,0,yes
+missing semicolon,water 1 water 2;,2,2,2,U,8,island,1,0,yes
+missing operand,water (x+); water 2;,4,4,4,T,15,panic,1,0,yes
+missing operand,water (x+); water 2;,4,4,4,T,15,phrase,1,0,yes
+missing operand,water (x+); water 2;,4,4,4,T,15,island,1,0,yes
+extra closing parenthesis,water x); water 2;,2,2,2,;,9,panic,1,0,yes
+extra closing parenthesis,water x); water 2;,2,2,2,;,9,phrase,1,0,yes
+extra closing parenthesis,water x); water 2;,2,2,2,;,9,island,1,0,yes
+assignment in condition,if (x = 1) water 2; water 3;,3,3,3,U,7,panic,15,14,yes
+assignment in condition,if (x = 1) water 2; water 3;,3,3,3,U,7,phrase,15,14,yes
+assignment in condition,if (x = 1) water 2; water 3;,3,3,3,U,7,island,1,0,yes
+misspelt keyword,watr 1; water 2;,0,0,0,P,0,panic,3,2,yes
+misspelt keyword,watr 1; water 2;,0,0,0,P,0,phrase,3,2,yes
+misspelt keyword,watr 1; water 2;,0,0,0,P,0,island,1,0,yes
+missing closing parenthesis,water (x; water 2;,3,3,3,),14,panic,8,7,yes
+missing closing parenthesis,water (x; water 2;,3,3,3,),14,phrase,8,7,yes
+missing closing parenthesis,water (x; water 2;,3,3,3,),14,island,1,0,yes

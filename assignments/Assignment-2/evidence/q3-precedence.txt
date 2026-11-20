@@ -1,0 +1,25 @@
+$ | id + id * id $ | $ < id | shift
+$ id | + id * id $ | id > + | reduce id
+$ N | + id * id $ | $ < + | shift
+$ N + | id * id $ | + < id | shift
+$ N + id | * id $ | id > * | reduce id
+$ N + N | * id $ | + < * | shift
+$ N + N * | id $ | * < id | shift
+$ N + N * id | $ | id > $ | reduce id
+$ N + N * N | $ | * > $ | reduce N * N
+$ N + N | $ | + > $ | reduce N + N
+$ N | $ | $ = $ | accept
+('+', ('id',), ('*', ('id',), ('id',)))
+
+$ | id ^ id ^ id $ | $ < id | shift
+$ id | ^ id ^ id $ | id > ^ | reduce id
+$ N | ^ id ^ id $ | $ < ^ | shift
+$ N ^ | id ^ id $ | ^ < id | shift
+$ N ^ id | ^ id $ | id > ^ | reduce id
+$ N ^ N | ^ id $ | ^ < ^ | shift
+$ N ^ N ^ | id $ | ^ < id | shift
+$ N ^ N ^ id | $ | id > $ | reduce id
+$ N ^ N ^ N | $ | ^ > $ | reduce N ^ N
+$ N ^ N | $ | ^ > $ | reduce N ^ N
+$ N | $ | $ = $ | accept
+('^', ('id',), ('^', ('id',), ('id',)))

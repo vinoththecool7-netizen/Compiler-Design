@@ -1,0 +1,48 @@
+$ E | rate * ( p + f ) - d $ | E → T R
+$ R T | rate * ( p + f ) - d $ | T → F U
+$ R U F | rate * ( p + f ) - d $ | F → id
+$ R U id | rate * ( p + f ) - d $ | match id
+$ R U | * ( p + f ) - d $ | U → * F U
+$ R U F * | * ( p + f ) - d $ | match *
+$ R U F | ( p + f ) - d $ | F → ( E )
+$ R U ) E ( | ( p + f ) - d $ | match (
+$ R U ) E | p + f ) - d $ | E → T R
+$ R U ) R T | p + f ) - d $ | T → F U
+$ R U ) R U F | p + f ) - d $ | F → id
+$ R U ) R U id | p + f ) - d $ | match id
+$ R U ) R U | + f ) - d $ | U → ε
+$ R U ) R | + f ) - d $ | R → + T R
+$ R U ) R T + | + f ) - d $ | match +
+$ R U ) R T | f ) - d $ | T → F U
+$ R U ) R U F | f ) - d $ | F → id
+$ R U ) R U id | f ) - d $ | match id
+$ R U ) R U | ) - d $ | U → ε
+$ R U ) R | ) - d $ | R → ε
+$ R U ) | ) - d $ | match )
+$ R U | - d $ | U → ε
+$ R | - d $ | R → - T R
+$ R T - | - d $ | match -
+$ R T | d $ | T → F U
+$ R U F | d $ | F → id
+$ R U id | d $ | match id
+$ R U | $ | U → ε
+$ R | $ | R → ε
+$ | $ | match $
+
+Rejected input
+$ E | rate * ( p + ) - d $ | E → T R
+$ R T | rate * ( p + ) - d $ | T → F U
+$ R U F | rate * ( p + ) - d $ | F → id
+$ R U id | rate * ( p + ) - d $ | match id
+$ R U | * ( p + ) - d $ | U → * F U
+$ R U F * | * ( p + ) - d $ | match *
+$ R U F | ( p + ) - d $ | F → ( E )
+$ R U ) E ( | ( p + ) - d $ | match (
+$ R U ) E | p + ) - d $ | E → T R
+$ R U ) R T | p + ) - d $ | T → F U
+$ R U ) R U F | p + ) - d $ | F → id
+$ R U ) R U id | p + ) - d $ | match id
+$ R U ) R U | + ) - d $ | U → ε
+$ R U ) R | + ) - d $ | R → + T R
+$ R U ) R T + | + ) - d $ | match +
+$ R U ) R T | ) - d $ | error at T on )

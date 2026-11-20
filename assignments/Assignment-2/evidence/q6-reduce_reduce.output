@@ -1,0 +1,116 @@
+Terminals which are not used
+
+   NUM
+   LET
+   IF
+   ELSE
+   AND
+   OR
+   EQ
+
+
+Rules never reduced
+
+    5 b: ID
+
+
+State 1 conflicts: 1 reduce/reduce
+
+
+Grammar
+
+    0 $accept: program $end
+
+    1 program: stmt
+
+    2 stmt: a
+    3     | b
+
+    4 a: ID
+
+    5 b: ID
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+ID (258) 4 5
+NUM (259)
+LET (260)
+IF (261)
+ELSE (262)
+AND (263)
+OR (264)
+EQ (265)
+
+
+Nonterminals, with rules where they appear
+
+$accept (11)
+    on left: 0
+program (12)
+    on left: 1, on right: 0
+stmt (13)
+    on left: 2 3, on right: 1
+a (14)
+    on left: 4, on right: 2
+b (15)
+    on left: 5, on right: 3
+
+
+state 0
+
+    0 $accept: . program $end
+
+    ID  shift, and go to state 1
+
+    program  go to state 2
+    stmt     go to state 3
+    a        go to state 4
+    b        go to state 5
+
+
+state 1
+
+    4 a: ID .
+    5 b: ID .
+
+    $end      reduce using rule 4 (a)
+    $end      [reduce using rule 5 (b)]
+    $default  reduce using rule 4 (a)
+
+
+state 2
+
+    0 $accept: program . $end
+
+    $end  shift, and go to state 6
+
+
+state 3
+
+    1 program: stmt .
+
+    $default  reduce using rule 1 (program)
+
+
+state 4
+
+    2 stmt: a .
+
+    $default  reduce using rule 2 (stmt)
+
+
+state 5
+
+    3 stmt: b .
+
+    $default  reduce using rule 3 (stmt)
+
+
+state 6
+
+    0 $accept: program $end .
+
+    $default  accept

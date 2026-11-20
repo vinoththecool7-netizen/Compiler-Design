@@ -1,0 +1,5 @@
+Apple clang version 21.0.0 (clang-2100.4.1.1)
+bison (GNU Bison) 2.3
+Darwin arm64
+Release C flags: -O2 -g -std=c17 -Wall -Wextra -Wpedantic -D_POSIX_C_SOURCE=200809L
+Separate ASan/UBSan build: all Q1–Q7 checks passed.

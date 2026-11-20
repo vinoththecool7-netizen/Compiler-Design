@@ -1,0 +1,18 @@
+S [h=5]
+  id 'a' [h=0]
+  = '=' [h=0]
+  E [h=4]
+    E [h=3]
+      T [h=2]
+        F [h=1]
+          id 'b' [h=0]
+    + '+' [h=0]
+    T [h=3]
+      T [h=2]
+        F [h=1]
+          id 'c' [h=0]
+      * '*' [h=0]
+      F [h=1]
+        id 'd' [h=0]
+=(a, +(b, *(c, d)))
+parse nodes=16, AST nodes=7

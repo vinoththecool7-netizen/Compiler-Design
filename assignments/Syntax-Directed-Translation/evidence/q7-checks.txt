@@ -1,0 +1,8 @@
+sample: 23 instructions, x=3, y=3, z=6
+nested: 17 instructions, x=3
+false arm: 9 instructions, x=2
+typed division: 4 instructions, z=1.5
+narrowing: 0 instructions, cannot narrow float to int for x
+undeclared: 0 instructions, undeclared y, undeclared z
+duplicate: 0 instructions, duplicate x, duplicate x
+syntax: 0 instructions, expected ')' at byte 13, got ';'

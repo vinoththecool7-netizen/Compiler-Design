@@ -1,0 +1,4 @@
+reduce M -> epsilon       [T:int] -> [T M:int]
+reduce L -> id            [T M id:x] -> [T M L:int]
+reduce L -> L , id        [T M L , id:y] -> [T M L:int]
+reduce D -> T M L         [T M L:int] -> [D]

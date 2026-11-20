@@ -1,0 +1,8 @@
+operands,expr_tokens,parse_nodes,attrs,left_height,right_height,postfix_actions,assignment_parse_nodes,assignment_ast_nodes
+1,1,4,8,3,3,1,7,3
+2,3,9,17,4,4,3,12,5
+4,7,19,35,6,6,7,22,9
+8,15,39,71,10,10,15,42,17
+16,31,79,143,18,18,31,82,33
+32,63,159,287,34,34,63,162,65
+64,127,319,575,66,66,127,322,129

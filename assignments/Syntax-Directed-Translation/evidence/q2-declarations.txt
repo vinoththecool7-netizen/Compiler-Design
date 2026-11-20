@@ -1,0 +1,29 @@
+D [h=4]
+  T [h=1, type=float]
+    float 'float' [h=0]
+  L [h=3, in=float]
+    L [h=2, in=float]
+      L [h=1, in=float]
+        id 'a' [h=0]
+      , ',' [h=0]
+      id 'b' [h=0]
+    , ',' [h=0]
+    id 'c' [h=0]
+float a,b,c; => {c:float, b:float, a:float}
+
+D [h=3]
+  T [h=1, type=int]
+    int 'int' [h=0]
+  L [h=2, in=int]
+    L [h=1, in=int]
+      id 'x' [h=0]
+    , ',' [h=0]
+    id 'y' [h=0]
+int x,y; => {y:int, x:int}
+
+duplicate a
+int a,a; => {a:int}
+
+unexpected token near byte 9 (syntax error)
+float a,; => {}
+

@@ -1,0 +1,26 @@
+Order 1: d2 → d3 → d4 → F2 → F3 → F4 → T2 → T3 → E2 → T34 → E234
+Order 2: d4 → d3 → d2 → F4 → F3 → F2 → T3 → T2 → T34 → E2 → E234
+d2 = 2
+d3 = 3
+d4 = 4
+F2 = 2
+F3 = 3
+F4 = 4
+T2 = 2
+T3 = 3
+E2 = 2
+T34 = 12
+E234 = 14
+
+Order 1: float → a.entry → b.entry → T.type → Louter.in → Linner.in → install a → install b
+Order 2: b.entry → a.entry → float → T.type → Louter.in → Linner.in → install a → install b
+float = 2 float
+T.type = 2 float
+Louter.in = 2 float
+Linner.in = 2 float
+a.entry = 0 a
+b.entry = 0 b
+install a = 2 a
+install b = 2 b
+
+cycle blocks X.in and Y.out

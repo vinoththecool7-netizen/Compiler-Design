@@ -1,0 +1,59 @@
+program
+  decl int
+    name x [in=int]
+    name y [in=int]
+  decl float
+    name z [in=float]
+  assign x [target=int]
+    literal 1 [addr=1, type=int]
+  assign y [target=int]
+    binary + [addr=%t1, type=int]
+      id x [addr=x, type=int]
+      literal 2 [addr=2, type=int]
+  if [join=L3]
+    condition > [true=L1, false=L2]
+      id y [addr=y, type=int]
+      literal 2 [addr=2, type=int]
+    block
+      assign z [target=float]
+        id y [addr=y, type=int]
+    block
+      assign z [target=float]
+        literal 0.5 [addr=0.5, type=float]
+  while [head=L4, exit=L6]
+    condition < [true=L5, false=L6]
+      id x [addr=x, type=int]
+      id y [addr=y, type=int]
+    block
+      assign x [target=int]
+        binary + [addr=%t3, type=int]
+          id x [addr=x, type=int]
+          literal 1 [addr=1, type=int]
+  assign z [target=float]
+    binary + [addr=%t5, type=float]
+      id z [addr=z, type=float]
+      id x [addr=x, type=int]
+Symbols: {y:int, x:int, z:float}
+x = 1
+%t1 = x + 2
+y = %t1
+if y > 2 goto L1
+goto L2
+L1:
+%t2 = intToFloat y
+z = %t2
+goto L3
+L2:
+z = 0.5
+L3:
+L4:
+if x < y goto L5
+goto L6
+L5:
+%t3 = x + 1
+x = %t3
+goto L4
+L6:
+%t4 = intToFloat x
+%t5 = z + %t4
+z = %t5

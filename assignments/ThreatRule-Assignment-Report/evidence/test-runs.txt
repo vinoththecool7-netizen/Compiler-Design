@@ -1,0 +1,147 @@
+$ build/scanner --dump build/sample.tr
+1	RULE	RULE
+1	ID	ssh_attack	id=1
+1	IF	IF
+1	ID	src_ip	id=2
+1	RELOP	==	text===
+1	IPV4	10.0.0.5	value=0x0A000005
+1	AND	AND
+1	ID	port	id=3
+1	RELOP	==	text===
+1	PORT	22	value=22
+1	AND	AND
+1	ID	attempts	id=4
+1	RELOP	>	text=>
+1	INTEGER	5	value=5
+1	THEN	THEN
+1	ALERT	ALERT
+1	STRING	"SSH brute force"	text="SSH brute force"
+1	SEMI	;
+tokens=18 errors=0 identifiers=4 hash=0 cve=0 url=0 ms=0.021000
+exit=0
+
+$ build/scanner --dump build/bounds.tr
+1	IPV4	0.0.0.0	value=0x00000000
+1	IPV4	255.255.255.255	value=0xFFFFFFFF
+1	ID	port	id=1
+1	RELOP	==	text===
+1	PORT	0	value=0
+2	ID	port	id=1
+2	RELOP	==	text===
+2	PORT	65535	value=65535
+tokens=8 errors=0 identifiers=1 hash=0 cve=0 url=0 ms=0.015000
+exit=0
+
+$ build/scanner --dump build/operators.tr
+1	RULE	RULE
+1	ID	RULEbook	id=1
+1	IF	IF
+1	AND	AND
+1	OR	OR
+1	THEN	THEN
+1	ALERT	ALERT
+1	BLOCK	BLOCK
+1	RELOP	<=	text=<=
+1	RELOP	<	text=<
+1	RELOP	>=	text=>=
+1	RELOP	>	text=>
+1	RELOP	!=	text=!=
+1	RELOP	==	text===
+1	SEMI	;
+3	ID	name	id=2
+3	ID	name	id=2
+3	STRING	"escaped \"quote\""	text="escaped \"quote\""
+tokens=18 errors=0 identifiers=2 hash=0 cve=0 url=0 ms=0.018000
+exit=0
+
+$ build/scanner --dump build/faults.tr
+1	ID	src_ip	id=1
+1	RELOP	==	text===
+2	ALERT	ALERT
+3	ID	port	id=2
+3	RELOP	==	text===
+3	PORT	22	value=22
+3	ID	attempts	id=3
+3	RELOP	>	text=>
+3	INTEGER	5	value=5
+4	RULE	RULE
+4	ID	ssh_attack	id=4
+4	IF	IF
+4	ID	src_ip	id=1
+4	RELOP	==	text===
+4	IPV4	10.0.0.5	value=0x0A000005
+4	AND	AND
+4	ID	port	id=2
+4	RELOP	==	text===
+4	PORT	22	value=22
+4	AND	AND
+4	ID	attempts	id=3
+4	RELOP	>	text=>
+4	INTEGER	5	value=5
+4	THEN	THEN
+4	ALERT	ALERT
+4	STRING	"SSH brute force"	text="SSH brute force"
+4	SEMI	;
+tokens=27 errors=3 identifiers=4 hash=0 cve=0 url=0 ms=0.026000
+line 1: invalid IPv4 address near `10.0.300.5`
+line 2: unterminated string near `"Login failed ;`
+line 3: unexpected character near `@`
+exit=1
+
+$ build/scanner --dump build/limits.tr
+1	ID	port	id=1
+1	RELOP	==	text===
+5	INTEGER	18446744073709551615	value=18446744073709551615
+7	SEMI	;
+8	ALERT	ALERT
+tokens=5 errors=7 identifiers=1 hash=0 cve=0 url=0 ms=0.022000
+line 1: port outside 0..65535 near `65536`
+line 2: invalid IPv4 address near `1.2.3`
+line 3: invalid IPv4 address near `1..2.3`
+line 4: invalid IPv4 address near `1234.2.3.4`
+line 6: integer outside uint64 range near `18446744073709551616`
+line 7: invalid string escape near `"bad\q"`
+line 8: unterminated string near `"unfinished\`
+exit=1
+
+$ build/scanner --dump --feed build/feed_valid.tr
+1	HASH	abababababababababababababababab	text=abababababababababababababababab
+1	HASH	dededededededededededededededededededede	text=dededededededededededededededededededede
+1	HASH	f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0	text=f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0
+1	CVE	CVE-2024-3400	text=CVE-2024-3400
+1	CVE	CVE-2026-12345	text=CVE-2026-12345
+1	URL	https://feeds.example/item?q=1#part	text=https://feeds.example/item?q=1#part
+1	SEMI	;
+tokens=7 errors=0 identifiers=0 hash=3 cve=2 url=1 ms=0.015000
+exit=0
+
+$ build/scanner --dump --feed build/feed_faults.tr
+2	CVE	CVE-2024-3400	text=CVE-2024-3400
+2	SEMI	;
+3	URL	https://feeds.example/item?q=1#part	text=https://feeds.example/item?q=1#part
+3	SEMI	;
+tokens=4 errors=3 identifiers=0 hash=0 cve=1 url=1 ms=0.017000
+line 1: invalid CVE near `CVE-2024-123`
+line 1: invalid URL near `https://bad`
+line 1: unexpected character near `@`
+exit=1
+
+$ build/scanner --dump build/feed_base.tr
+1	ID	abababababababababababababababab	id=1
+1	ID	CVE	id=2
+1	INTEGER	2024	value=2024
+1	INTEGER	3400	value=3400
+1	ID	https	id=3
+1	ID	feeds	id=4
+1	ID	example	id=5
+1	ID	i	id=6
+1	SEMI	;
+tokens=9 errors=7 identifiers=6 hash=0 cve=0 url=0 ms=0.021000
+line 1: unexpected character near `-`
+line 1: unexpected character near `-`
+line 1: unexpected character near `:`
+line 1: unexpected character near `/`
+line 1: unexpected character near `/`
+line 1: unexpected character near `.`
+line 1: unexpected character near `/`
+exit=1

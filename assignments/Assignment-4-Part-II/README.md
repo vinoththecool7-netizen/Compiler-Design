@@ -13,4 +13,4 @@ This regenerates the JSON files in `evidence/`, runs the generated code in the i
 
 Current limitations include unsupported fall-through, parser nesting limits and limits on deeply nested non-binary ASTs. Physical activation records and triple memory sizes discussed in the report are illustrative models; the interpreter uses Python objects.
 
-[Word report](docs/Report.docx) · [Download project ZIP](docs/Project.zip)
+[Download project ZIP](docs/Project.zip)

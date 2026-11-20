@@ -10,4 +10,4 @@ The script runs 32 comparisons between the TAC interpreter, the three-operand in
 
 `backend.py` defines TAC, control flow, data-flow analysis, allocation and interpreters. `verify.py` implements local and global optimisers, peepholes and experiments. `strict.py` lowers the extended intermediate target to destructive operations and interprets it independently. The cost is one plus one per memory operand. Register and immediate sources to LD, indexed memory operands, and unbounded arithmetic are assumptions for aspects not defined by the target description. The optimizer does not implement general pointer or array stores, procedure calls, loop transformation, a production target or a stack bytecode target. Reported optimization effort counts selected operations, not compile time.
 
-[Word report](docs/Report.docx) · [Download project ZIP](docs/Project.zip)
+[Download project ZIP](docs/Project.zip)
